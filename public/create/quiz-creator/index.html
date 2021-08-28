@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creator | KahootClone</title>
+        <link rel = "stylesheet" href = "../../css/quizCreator.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    </head>
+    <body onload = "setBGColor()">
+        <h1 id = "title">สร้างแบบทดสอบกัน</h1>
+        
+        <div class="form-field">
+            <label id = "quizTitle">ชื่อแบบทดสอบ</label>
+            <input id = "name" type = "text" name="name" autofocus/>
+        </div>
+        <br>
+        <br>
+        <div id = "allQuestions">
+            <div id="question-field">
+                <label>คำถาม 1: </label>
+                <input class = "question" id = "q1" type = "text" autofocus/>
+                <br>
+                <br>
+                <label>คำตอบ 1: </label>
+                <input id = "1a1" type = "text" autofocus/>
+                <label>คำตอบ 2: </label>
+                <input id = "1a2" type = "text" autofocus/>
+                <br>
+                <br>
+                <label>คำตอบ 3: </label>
+                <input id = "1a3"  type = "text"autofocus/>
+                <label>คำตอบ 4: </label>
+                <input id = "1a4"  type = "text" autofocus/>
+                <br>
+                <br>
+                <label>คำตอบที่ถูก (1-4) :</label>
+                <input class = "correct" id = "correct1"  type = "number" autofocus/>
+            </div>
+        </div>
+        <br>
+        <button onclick = "addQuestion()">คำถามต่อไป</button>
+        
+        <br>
+        <br>
+        
+        <div class="form-field">
+            <button onclick = "updateDatabase()">สร้างแบบทดสอบแล้ว</button>
+        </div>
+        
+        <br>
+        
+        <button onclick = 'cancelQuiz()'>ยกเลิกแบบทดสอบ</button>
+        
+        <script src = "../../socket.io/socket.io.js"></script>
+        <script src = "../../js/quizCreator.js"></script>
+    </body>
+</html>
