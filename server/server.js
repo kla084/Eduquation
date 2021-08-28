@@ -3,7 +3,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
-const PORT = process.env.PORT || 8080
+const port = process.env.PORT || 8080;
 
 //Import classes
 const {LiveGames} = require('./utils/liveGames');
@@ -26,8 +26,8 @@ var url = "mongodb://localhost:27017/";
 app.use(express.static(publicPath));
 
 //Starting server on port 3000
-server.listen(PORT, () => {
-    console.log("Server started on port ${PORT}");
+server.listen(port, () => {
+    console.log("Server started on port ${port}");
 });
 
 //When a connection to server is made from client
